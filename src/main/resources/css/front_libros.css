@@ -1,0 +1,85 @@
+/* Contenedor principal */
+.mainFxmlClass {
+    -fx-background-color: #ffffff; /* blanco */
+}
+
+/* Título */
+.header-title {
+    -fx-text-fill: #000000; /* negro */
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+/* Etiquetas */
+.field-label {
+    -fx-text-fill: #000000; /* negro */
+    -fx-font-size: 13px;
+}
+
+/* Botones (base) */
+.button {
+    -fx-background-color: #ffffff; /* blanco */
+    -fx-text-fill: #000000;         /* negro */
+    -fx-border-color: #cfcfcf;      /* borde suave */
+    -fx-border-radius: 8;           /* redondeado suave */
+    -fx-background-radius: 8;
+    -fx-padding: 6 12 6 12;
+}
+
+/* Hover / Focus para botones */
+.button:hover {
+    -fx-background-color: #f6f6f6;
+}
+.button:focused {
+    -fx-border-color: #4b9cff;     /* anillo de foco suave */
+    -fx-border-width: 1.2;
+}
+
+/* Botón "Cerrar" y "Recargar" heredan .button; solo si quieres diferenciarlos: */
+/*.btn-close { }*/
+/*.btn-refresh { }*/
+
+/* TitledPane */
+.titled-pane > .title {
+    -fx-background-color: #f2f2f2; /* cabecera suave en gris */
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-border-color: #e5e5e5;
+    -fx-border-width: 0 0 1 0;
+}
+.titled-pane > *.content {
+    -fx-background-color: #ffffff; /* blanco dentro */
+    -fx-padding: 8;
+}
+
+/* TextArea */
+.text-area {
+    -fx-control-inner-background: #ffffff; /* blanco */
+    -fx-text-fill: #000000;                 /* negro */
+    -fx-prompt-text-fill: #9e9e9e;          /* placeholder gris */
+    -fx-border-color: #cfcfcf;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+.text-area:focused {
+    -fx-border-color: #4b9cff;
+}
+
+/* ComboBox */
+.combo-box-base {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+    -fx-border-color: #cfcfcf;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+.combo-box-base:focused {
+    -fx-border-color: #4b9cff;
+}
+.combo-box-popup .list-cell {
+    -fx-text-fill: #000000;
+    -fx-background-color: #ffffff;
+}
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #f2f2f2;
+}

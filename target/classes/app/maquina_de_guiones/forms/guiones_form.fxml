@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:id="rootGuion" prefHeight="600.0" prefWidth="700.0" styleClass="root root-guion" stylesheets="@../../../css/guiones.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.maquina_de_guiones.controllers.GuionesFormController">
+
+    <children>
+
+        <!-- Título -->
+        <Label id="titulo-guion" alignment="CENTER" maxWidth="Infinity" prefHeight="30" styleClass="header-label-guion title heading page-title" text="Crear nuevo guion" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+
+        <!-- Separador -->
+        <Separator styleClass="separator-guion" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="56.0" />
+
+        <!-- Columna de labels -->
+        <Label alignment="CENTER_RIGHT" layoutX="52.0" layoutY="71.0" prefHeight="17.0" prefWidth="117.0" styleClass="form-label" text="Streamer:" AnchorPane.leftAnchor="52.0" AnchorPane.topAnchor="71.0" />
+        <Label alignment="CENTER_RIGHT" layoutX="52.0" layoutY="122.0" prefHeight="17.0" prefWidth="117.0" styleClass="form-label" text="Colaborador:" AnchorPane.leftAnchor="52.0" AnchorPane.topAnchor="122.0" />
+        <Label alignment="CENTER_RIGHT" layoutX="52.0" layoutY="177.0" prefHeight="17.0" prefWidth="117.0" styleClass="form-label" text="Título:" AnchorPane.leftAnchor="52.0" AnchorPane.topAnchor="177.0" />
+        <Label alignment="CENTER_RIGHT" layoutX="52.0" layoutY="223.0" prefHeight="17.0" prefWidth="117.0" styleClass="form-label" text="Nombre:" AnchorPane.leftAnchor="52.0" AnchorPane.topAnchor="223.0" />
+        <Label alignment="CENTER_RIGHT" layoutX="52.0" layoutY="269.0" prefHeight="17.0" prefWidth="117.0" styleClass="form-label" text="Descripción:" AnchorPane.leftAnchor="52.0" AnchorPane.topAnchor="269.0" />
+        <Label alignment="CENTER_RIGHT" layoutX="52.0" layoutY="310.0" prefHeight="17.0" prefWidth="117.0" styleClass="form-label" text="Contenido:" AnchorPane.leftAnchor="52.0" AnchorPane.topAnchor="310.0" />
+
+        <!-- Campos -->
+        <ComboBox fx:id="cmbStreamers" layoutX="189.0" layoutY="67.0" prefHeight="40.0" promptText="Seleccionar streamer" styleClass="combo-guion form-control" AnchorPane.leftAnchor="189.0" AnchorPane.rightAnchor="51.0" AnchorPane.topAnchor="67.0" />
+
+        <ComboBox fx:id="cmbColaboradores" layoutX="189.0" layoutY="119.0" prefHeight="40.0" promptText="Asignar colaborador (opcional)" styleClass="combo-guion form-control" AnchorPane.leftAnchor="189.0" AnchorPane.rightAnchor="51.0" AnchorPane.topAnchor="119.0" />
+
+        <TextField fx:id="txtTitulo" layoutX="189.0" layoutY="173.0" promptText="Título del guion" styleClass="input-guion text-input form-control" AnchorPane.leftAnchor="189.0" AnchorPane.rightAnchor="51.0" AnchorPane.topAnchor="173.0" />
+
+        <TextField fx:id="txtNombre" layoutX="189.0" layoutY="219.0" promptText="Nombre corto o alias del guion" styleClass="input-guion text-input form-control" AnchorPane.leftAnchor="189.0" AnchorPane.rightAnchor="51.0" AnchorPane.topAnchor="219.0" />
+
+        <TextField fx:id="txtDescripcion" layoutX="189.0" layoutY="265.0" promptText="Descripción general del guion" styleClass="input-guion text-input form-control" AnchorPane.leftAnchor="189.0" AnchorPane.rightAnchor="51.0" AnchorPane.topAnchor="265.0" />
+
+        <TextArea fx:id="txtContenido" layoutX="189.0" layoutY="311.0" prefRowCount="8" promptText="Escribe aquí el contenido completo del guion..." styleClass="textarea-guion form-control" wrapText="true" AnchorPane.bottomAnchor="83.0" AnchorPane.leftAnchor="189.0" AnchorPane.rightAnchor="51.0" AnchorPane.topAnchor="311.0" />
+
+        <!-- Botones -->
+        <HBox alignment="CENTER" layoutX="20.0" layoutY="543.0" spacing="15.0" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+            <children>
+                <Button fx:id="btnNuevo" onAction="#nuevoGuion" styleClass="button btn-secundario" text="Nuevo" />
+                <Button fx:id="btnGuardar" onAction="#guardarGuion" styleClass="button btn-accion" text="Guardar" />
+                <Button fx:id="btnActualizar" onAction="#actualizarGuion" styleClass="button btn-accion" text="Actualizar" />
+                <Button fx:id="btnEliminar" onAction="#eliminarGuion" styleClass="button btn-cancelar" text="Eliminar" />
+                <Button fx:id="btnCancelar" onAction="#cancelar" styleClass="button btn-cancelar" text="Cancelar" />
+            </children>
+        </HBox>
+      <Separator layoutX="20.0" layoutY="532.0" prefHeight="3.0" prefWidth="660.0" styleClass="separator-guion" />
+
+    </children>
+</AnchorPane>

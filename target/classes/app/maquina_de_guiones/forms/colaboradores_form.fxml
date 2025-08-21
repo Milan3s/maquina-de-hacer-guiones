@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="root-colaborador" fx:id="rootColaborador" prefHeight="433.0" prefWidth="903.0" style="-fx-background-color: white;" styleClass="root root-colaborador" stylesheets="@../../../css/colaborador.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.maquina_de_guiones.controllers.ColaboradoresFormController">
+
+    <children>
+
+        <!-- Título -->
+        <Label id="titulo" alignment="CENTER" layoutX="170.0" layoutY="63.0" maxWidth="Infinity" prefHeight="17.0" prefWidth="554.0" styleClass="title heading page-title" text="Gestión de Colaboradores" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="179.0" AnchorPane.topAnchor="63.0" />
+
+        <!-- Separador -->
+        <Separator id="separador-titulo" layoutX="166.0" layoutY="96.0" prefHeight="4.0" prefWidth="561.0" styleClass="divider" AnchorPane.leftAnchor="166.0" AnchorPane.rightAnchor="176.0" AnchorPane.topAnchor="96.0" />
+
+        <!-- Selector de colaborador -->
+        <ComboBox id="selector-colaborador" fx:id="cmbColaboradores" layoutX="384.0" layoutY="133.0" prefHeight="40.0" prefWidth="344.0" promptText="Selecciona uno..." styleClass="form-control form-select collaborator-select" AnchorPane.leftAnchor="384.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="133.0" />
+        <Label id="etiqueta-selector-colaborador" layoutX="175.0" layoutY="145.0" styleClass="form-label" text="Selecciona Colaborador :" />
+
+        <!-- Formulario -->
+        <GridPane id="form-colaborador" fx:id="gridColaborador" hgap="16.0" layoutX="175.0" layoutY="188.0" prefHeight="99.0" prefWidth="554.0" styleClass="form form-grid" vgap="12.0" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="174.0" AnchorPane.topAnchor="188.0">
+
+            <columnConstraints>
+                <ColumnConstraints percentWidth="36.0" />
+                <ColumnConstraints percentWidth="64.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+            </rowConstraints>
+
+            <children>
+                <Label id="label-nombre" styleClass="form-label" text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField id="input-nombre" fx:id="txtNombre" promptText="Nombre del colaborador" styleClass="form-control text-input" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label id="label-canal" styleClass="form-label" text="Canal:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField id="input-canal" fx:id="txtCanal" promptText="Nombre del canal" styleClass="form-control text-input" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label id="label-descripcion" styleClass="form-label" text="Descripción:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField id="input-descripcion" fx:id="txtDescripcion" promptText="Descripción del colaborador" styleClass="form-control text-input" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+
+        <!-- Botones principales -->
+        <HBox id="barra-acciones" alignment="CENTER" layoutX="21.0" layoutY="375.0" spacing="12.0" styleClass="actions actions-primary" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="375.0">
+            <children>
+                <Button id="btn-nuevo" fx:id="btnNuevo" onAction="#nuevoColaborador" styleClass="btn btn-primary" text="Nuevo" />
+                <Button id="btn-guardar" fx:id="btnGuardar" onAction="#guardarColaborador" styleClass="btn btn-success" text="Guardar" />
+                <Button id="btn-actualizar" fx:id="btnActualizar" onAction="#actualizarColaborador" styleClass="btn btn-warning" text="Actualizar" />
+                <Button id="btn-eliminar" fx:id="btnEliminar" onAction="#eliminarColaborador" styleClass="btn btn-danger" text="Eliminar" />
+                <Button id="btn-cancelar" fx:id="btnCancelar" onAction="#cancelar" styleClass="btn btn-ghost" text="Cancelar" />
+            </children>
+        </HBox>
+
+        <!-- Botón cancelar (contenedor vacío reservado) -->
+        <HBox id="barra-acciones-secundaria" alignment="CENTER" spacing="12.0" styleClass="actions actions-secondary" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="410.0" />
+      <Separator id="separador-titulo" layoutX="163.0" layoutY="348.0" prefHeight="4.0" prefWidth="561.0" styleClass="divider" />
+
+    </children>
+</AnchorPane>

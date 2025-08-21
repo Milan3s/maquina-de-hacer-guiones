@@ -1,0 +1,69 @@
+/* =========================================================
+   🎨 Tokens / Base
+   ========================================================= */
+.root, .root-dashboard {
+    -color-bg: #FFFFFF;
+    -color-fg: #111111;
+    -color-border: #D0D7E2;
+    -color-focus: #4C8DF6;
+    -color-hover: #F3F4F6;
+    -color-pressed: #E5E7EB;
+    -color-disabled-bg: #F5F5F5;
+    -color-disabled-fg: #9CA3AF;
+    -border-width: 1;
+
+    -fx-background-color: -color-bg;
+    -fx-text-fill: -color-fg;
+    -fx-font-family: "Segoe UI", "Roboto", "Sans-Serif";
+    -fx-font-size: 13px;
+}
+
+/* =========================================================
+   🅰️ Tipografía
+   ========================================================= */
+.title, .heading, .page-title, .header-label, #titulo-dashboard {
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-fg;
+    -fx-font-size: 18px;
+}
+
+/* Separadores */
+.separator {
+    -fx-opacity: 0.35;
+}
+
+/* =========================================================
+   🔘 Botones (texto negro, fondo blanco, borde fino)
+   ========================================================= */
+.button, .dash-button {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: -color-fg;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: -color-border;
+    -fx-cursor: hand;
+}
+.button:hover, .dash-button:hover   { -fx-background-color: -color-hover; }
+.button:pressed, .dash-button:pressed { -fx-background-color: -color-pressed; }
+.button:focused, .dash-button:focused { -fx-border-color: -color-focus; }
+.button:disabled, .dash-button:disabled {
+    -fx-background-color: -color-disabled-bg;
+    -fx-text-fill: -color-disabled-fg;
+    -fx-border-color: -color-pressed;
+}
+
+/* =========================================================
+   ⌗ Grid / Layout
+   ========================================================= */
+.dashboard-grid {
+    /* espacio visual limpio; puedes añadir sombras suaves a botones si lo deseas */
+}
+
+/* =========================================================
+   🛈 Estado (barra inferior)
+   ========================================================= */
+.status-label, #status-bd {
+    -fx-text-fill: rgba(0,0,0,0.65);
+    -fx-font-size: 12px;
+}

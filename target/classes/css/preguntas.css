@@ -1,0 +1,90 @@
+/* =========================================================
+   🎨 Tokens / Base
+   ========================================================= */
+.root {
+    /* Looked-up colors (ajusta aquí y se propaga) */
+    -color-bg: #FFFFFF;
+    -color-fg: #111111;
+    -color-border: #D0D7E2;
+    -color-focus: #4C8DF6;
+    -color-hover: #F3F4F6;
+    -color-pressed: #E5E7EB;
+    -color-disabled-bg: #F5F5F5;
+    -color-disabled-fg: #9CA3AF;
+
+    /* Grosor de borde centralizado */
+    -border-width: 1;
+
+    -fx-background-color: -color-bg;
+    -fx-font-family: "Segoe UI", "Roboto", "Sans-Serif";
+    -fx-font-size: 13px;
+    -fx-text-fill: -color-fg;
+}
+
+/* =========================================================
+   🅰️ Tipografía
+   ========================================================= */
+/* Título: aplica a clases usadas en el FXML y al id #titulo */
+.title, .heading, .page-title, #titulo, .title-colaborador {
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-fg;
+}
+.title, .heading, .page-title {
+    -fx-font-size: 15px; /* súbelo a 16–18 si quieres más presencia */
+}
+
+/* Labels: todos en negrita */
+.form-label, .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-fg;
+}
+
+/* Separadores */
+.separator {
+    -fx-opacity: 0.35;
+}
+
+/* =========================================================
+   🧾 Campos de formulario
+   ========================================================= */
+.text-field,
+.combo-box-base {
+    -fx-background-color: -fx-control-inner-background;
+    -fx-text-fill: -color-fg;
+    -fx-border-color: -color-border;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 8 10;
+    /* opcional: si quieres igualar el grosor también en inputs, descomenta: */
+    /* -fx-border-width: var(-border-width); */
+}
+.text-input {
+    -fx-prompt-text-fill: rgba(0,0,0,0.45);
+}
+.text-field:focused,
+.combo-box-base:focused {
+    -fx-border-color: -color-focus;
+}
+
+/* =========================================================
+   🔘 Botones (fondo blanco + texto negro)
+   ========================================================= */
+.button {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: -color-fg;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: -color-border;
+    -fx-border-width: var(-border-width);   /* ⬅️ grosor uniforme */
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+}
+.button:hover   { -fx-background-color: -color-hover; }
+.button:pressed { -fx-background-color: -color-pressed; }
+.button:focused { -fx-border-color: -color-focus; }
+.button:disabled {
+    -fx-background-color: -color-disabled-bg;
+    -fx-text-fill: -color-disabled-fg;
+    -fx-border-color: -color-pressed;
+}

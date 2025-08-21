@@ -1,0 +1,115 @@
+/* =========================================================
+   🎨 Tokens / Base
+   ========================================================= */
+.root, .root-guion {
+    /* Tokens (ajústalos y se propaga todo) */
+    -color-bg: #FFFFFF;
+    -color-fg: #111111;
+    -color-border: #D0D7E2;
+    -color-focus: #4C8DF6;
+    -color-hover: #F3F4F6;
+    -color-pressed: #E5E7EB;
+    -color-disabled-bg: #F5F5F5;
+    -color-disabled-fg: #9CA3AF;
+
+    -fx-background-color: -color-bg;
+    -fx-text-fill: -color-fg;
+    -fx-font-family: "Segoe UI", "Roboto", "Sans-Serif";
+    -fx-font-size: 13px;
+}
+
+/* =========================================================
+   🅰️ Tipografía
+   ========================================================= */
+/* Título (aplica a clases genéricas y a tu clase existente) */
+.title, .heading, .page-title, .header-label-guion, #titulo-guion {
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-fg;
+}
+.title, .heading, .page-title, .header-label-guion {
+    -fx-font-size: 16px; /* 16–18 si quieres más presencia */
+}
+
+/* Labels: todos en negrita */
+.form-label, .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-fg;
+}
+
+/* Separadores */
+.separator-guion, .separator {
+    -fx-opacity: 0.35;
+}
+
+/* =========================================================
+   🧾 Campos de formulario
+   ========================================================= */
+.input-guion,
+.textarea-guion,
+.combo-guion,
+.combo-box-base,
+.form-control {
+    -fx-background-color: -fx-control-inner-background;
+    -fx-text-fill: -color-fg;
+    -fx-border-color: -color-border;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 8 10;
+}
+/* Placeholder */
+.text-input {
+    -fx-prompt-text-fill: rgba(0,0,0,0.45);
+}
+/* Focus */
+.input-guion:focused,
+.textarea-guion:focused,
+.combo-box-base:focused,
+.form-control:focused {
+    -fx-border-color: -color-focus;
+}
+
+/* TextArea: contenido redondeado */
+.textarea-guion {
+    -fx-background-insets: 0;
+}
+.textarea-guion .content {
+    -fx-background-color: -fx-control-inner-background;
+    -fx-background-insets: 0;
+    -fx-background-radius: 8;
+    -fx-padding: 6;
+}
+
+/* =========================================================
+   🔘 Botones: fondo blanco + texto negro
+   ========================================================= */
+.button,
+.btn-accion,
+.btn-secundario,
+.btn-cancelar {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: -color-fg;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: -color-border;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+}
+.button:hover,
+.btn-accion:hover,
+.btn-secundario:hover,
+.btn-cancelar:hover {
+    -fx-background-color: -color-hover;
+}
+.button:pressed,
+.btn-accion:pressed,
+.btn-secundario:pressed,
+.btn-cancelar:pressed {
+    -fx-background-color: -color-pressed;
+}
+.button:focused { -fx-border-color: -color-focus; }
+.button:disabled {
+    -fx-background-color: -color-disabled-bg;
+    -fx-text-fill: -color-disabled-fg;
+    -fx-border-color: -color-pressed;
+}

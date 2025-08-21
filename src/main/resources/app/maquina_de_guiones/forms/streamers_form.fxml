@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="root-streamer" fx:id="rootStreamer" prefHeight="417.0" prefWidth="775.0" styleClass="root root-streamer" stylesheets="@../../../css/streamers.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.maquina_de_guiones.controllers.StreamersFormController">
+
+    <children>
+
+        <!-- Título -->
+        <Label id="titulo-streamer" layoutX="313.0" layoutY="21.0" styleClass="title heading page-title" text="Gestión de Streamers" />
+
+        <!-- Separador superior -->
+        <Separator layoutX="25.0" layoutY="55.0" prefWidth="725.0" />
+
+        <!-- ====== Selección de streamer ====== -->
+        <Label layoutX="48.0" layoutY="85.0" styleClass="form-label" text="Seleccionar streamer:" />
+        <ComboBox id="selector-streamer" fx:id="cmbStreamers" layoutX="223.0" layoutY="80.0" prefHeight="40.0" prefWidth="505.0" promptText="Selecciona un streamer" styleClass="combo-streamer form-control">
+            <tooltip><Tooltip text="Elige un streamer para editar o eliminar" /></tooltip>
+        </ComboBox>
+
+        <!-- ====== Nombre ====== -->
+        <Label layoutX="48.0" layoutY="135.0" styleClass="form-label" text="Nombre:" />
+        <TextField id="input-nombre-streamer" fx:id="txtNombre" layoutX="223.0" layoutY="130.0" prefWidth="505.0" promptText="Nombre del streamer" styleClass="input-streamer text-input form-control">
+            <tooltip><Tooltip text="Escribe el nombre del streamer" /></tooltip>
+        </TextField>
+
+        <!-- ====== Canal ====== -->
+        <Label layoutX="48.0" layoutY="185.0" styleClass="form-label" text="Canal:" />
+        <TextField id="input-canal-streamer" fx:id="txtCanal" layoutX="223.0" layoutY="180.0" prefWidth="505.0" promptText="Nombre del canal" styleClass="input-streamer text-input form-control">
+            <tooltip><Tooltip text="Escribe el nombre del canal" /></tooltip>
+        </TextField>
+
+        <!-- ====== Descripción ====== -->
+        <Label layoutX="48.0" layoutY="235.0" styleClass="form-label" text="Descripción:" />
+        <TextArea id="input-descripcion-streamer" fx:id="txtDescripcion" layoutX="223.0" layoutY="230.0" prefHeight="90.0" prefWidth="505.0" promptText="Descripción del streamer" styleClass="textarea-streamer form-control" wrapText="true">
+            <tooltip><Tooltip text="Añade una breve descripción" /></tooltip>
+        </TextArea>
+
+        <!-- Separador botones -->
+        <Separator layoutX="10.0" layoutY="335.0" prefWidth="756.0" />
+
+        <!-- ====== Botones (colócalos donde quieras) ====== -->
+        <Button id="btn-nuevo-streamer" fx:id="btnNuevo" layoutX="25.0" layoutY="353.0" onAction="#nuevoStreamer" prefHeight="40.0" prefWidth="140.0" styleClass="button btn-secundario" text="Nuevo" />
+
+        <Button id="btn-guardar-streamer" fx:id="btnGuardar" layoutX="175.0" layoutY="353.0" onAction="#guardarStreamer" prefHeight="40.0" prefWidth="140.0" styleClass="button btn-accion" text="Guardar" />
+
+        <Button id="btn-actualizar-streamer" fx:id="btnActualizar" layoutX="325.0" layoutY="353.0" onAction="#actualizarStreamer" prefHeight="40.0" prefWidth="140.0" styleClass="button btn-accion" text="Actualizar" />
+
+        <Button id="btn-eliminar-streamer" fx:id="btnEliminar" layoutX="475.0" layoutY="353.0" onAction="#eliminarStreamer" prefHeight="40.0" prefWidth="140.0" styleClass="button btn-cancelar" text="Eliminar" />
+
+        <Button id="btn-cancelar-streamer" fx:id="btnCancelar" layoutX="625.0" layoutY="353.0" onAction="#cancelar" prefHeight="40.0" prefWidth="140.0" styleClass="button btn-cancelar" text="Cancelar" />
+
+    </children>
+</AnchorPane>

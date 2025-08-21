@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="frontLibrosRoot" prefHeight="978.0" prefWidth="1277.0" styleClass="mainFxmlClass" stylesheets="@../../css/front_libros.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.maquina_de_guiones.controllers.FrontLibrosController">
+
+    <children>
+
+        <!-- Título -->
+        <Label fx:id="lblTitulo" layoutX="564.0" layoutY="26.0" styleClass="header-title" text="Libros y Preguntas" />
+
+        <!-- Botón cerrar -->
+        <Button layoutX="578.0" layoutY="845.0" onAction="#onCerrar" prefHeight="31.0" prefWidth="117.0" styleClass="btn-close" text="Cerrar" />
+
+        <!-- Separador -->
+        <Separator layoutX="64.0" layoutY="65.0" prefHeight="0.0" prefWidth="1150.0" />
+
+        <!-- Selector de libro -->
+        <Label layoutX="116.0" layoutY="114.0" styleClass="field-label" text="Libros:" />
+        <ComboBox fx:id="cbLibros" layoutX="171.0" layoutY="110.0" onAction="#onLibroSeleccionado" prefHeight="27.0" prefWidth="329.0" promptText="Selecciona un libro" />
+        
+        <!-- Selector de guion (se autocompleta según el libro seleccionado) -->
+        <Label layoutX="116.0" layoutY="160.0" styleClass="field-label" text="Guion:" />
+        <ComboBox fx:id="cbGuiones" editable="false" layoutX="171.0" layoutY="156.0" prefHeight="27.0" prefWidth="417.0" promptText="Guion del libro" />
+
+        <Button layoutX="519.0" layoutY="108.0" onAction="#onRecargarLibros" styleClass="btn-refresh" text="Recargar" />
+
+        <!-- Contenido del libro -->
+        <TitledPane expanded="true" layoutX="108.0" layoutY="203.0" prefHeight="603.0" prefWidth="494.0" text="Contenido del libro">
+            <content>
+                <TextArea fx:id="taContenidoLibro" editable="false" promptText="Aquí aparecerá el contenido del libro seleccionado..." wrapText="true" />
+            </content>
+        </TitledPane>
+
+        <!-- Preguntas -->
+        <TitledPane expanded="true" layoutX="677.0" layoutY="203.0" prefHeight="603.0" prefWidth="494.0" text="Preguntas">
+            <content>
+                <TextArea fx:id="taContenidoPreguntas" editable="false" promptText="Aquí aparecerán las preguntas del libro seleccionado..." wrapText="true" />
+            </content>
+        </TitledPane>
+      <Label alignment="CENTER" layoutX="468.0" layoutY="914.0" prefHeight="29.0" prefWidth="341.0" text="© Desarrollado por Soujirito" />
+
+    </children>
+</AnchorPane>

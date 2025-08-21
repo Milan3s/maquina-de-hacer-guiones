@@ -1,0 +1,4 @@
+--patch-module
+app.maquina_de_guiones=_
+--add-reads
+app.maquina_de_guiones=ALL-UNNAMED
